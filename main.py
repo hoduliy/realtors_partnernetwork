@@ -1,4 +1,5 @@
 # Точка входа, код запуска бота
+
 # Для асинхронного запуска бота
 import asyncio
 # Логирование
@@ -14,13 +15,16 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.default import DefaultBotProperties
 
 # Наш модуль с настройками бота
-import config
+from config import load_config
 # Наш модуль с функционалом бота
-from handlers import router
+from handlers.user import router
+
+
+config = load_config('.env')
 
 
 async def main():
-    bot = Bot(token=config.BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(token=config.tg_bot.token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     # MemoryStorage - стирать все данные бота при перезапуске
     dp = Dispatcher(storage=MemoryStorage())
     # Подключение всех обработчиков, использующих router
