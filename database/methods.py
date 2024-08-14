@@ -26,18 +26,33 @@ async def execute_db_func(pool, name: str, params: dict):
 
     res = {}
 
-    for el_in in json_params['IN']:
-        sql = sql.replace(':' + el_in['name'], str(params[el_in['name']]))
-    for el_out in json_params['OUT']:
-        res[el_out['name']] = None
+    try:
+        for el_in in json_params['IN']:
+            cur_param = ''
+            if el_in['type'].upper() in ('SMALLINT', 'INTEGER', 'BIGINT'):
+                cur_param = str(params[el_in['name']])
+            elif el_in['type'].upper() in ('VARCHAR', 'TEXT'):
+                cur_param = '\'' + str(params[el_in['name']]) + '\''
 
-    print(sql)
+            sql = sql.replace(':' + el_in['name'], cur_param)
+    except:
+        pass
+
+    try:
+        for el_out in json_params['OUT']:
+            res[el_out['name']] = None
+    except:
+        pass
+
     res_row = await pool.fetchrow(sql)
-    for out_param in res_row.items():
-        res[out_param[0].upper()] = out_param[1]
 
-    if len(res) == 1:
-        print(res[json_params['OUT'][0]['name']])
+    if res_row:
+        for out_param in res_row.items():
+            res[out_param[0].upper()] = out_param[1]
+
+    if len(res) == 0:
+        return
+    elif len(res) == 1:
         return res[json_params['OUT'][0]['name']]
     else:
         return res
