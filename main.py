@@ -14,6 +14,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 # Дефолтные настройки для разметки сообщений бота
 from aiogram.client.default import DefaultBotProperties
 
+# Наш модуль взаимодействия с БД
+from database.methods import create_pool
 # Наш модуль с настройками бота
 from config import load_config
 # Наш модуль с функционалом бота
@@ -29,6 +31,12 @@ async def main():
     dp = Dispatcher(storage=MemoryStorage())
     # Подключение всех обработчиков, использующих router
     dp.include_router(router)
+
+    # Создаем пул соединений с БД
+    pool = await create_pool(config.db)
+    # Добавляем пул соединений в хранилище данных, чтобы использовать в других модулях
+    dp.workflow_data.update({"pool": pool})
+
     # Удаление всех обновлений, которые были после завершения работы бота
     await bot.delete_webhook(drop_pending_updates=True)
     # Запуск бота в работу
