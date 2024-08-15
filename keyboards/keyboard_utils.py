@@ -33,7 +33,7 @@ kb_approval_seller = InlineKeyboardMarkup(
 
 kb_open_webapp = InlineKeyboardMarkup(
     inline_keyboard=[
-        [InlineKeyboardButton(text="Запустить", web_app=WebAppInfo(url='https://hoduliy.github.io/realtors_partnernetwork/'))],
+        [InlineKeyboardButton(text="Запустить", web_app=WebAppInfo(url='https://hoduliy.github.io/realtors_partnernetwork/index.html'))],
         [InlineKeyboardButton(text="Официальный чат", url='https://buhlovo-park.ru/')]
     ]
 )
