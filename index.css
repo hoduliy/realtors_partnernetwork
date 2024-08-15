@@ -27,6 +27,7 @@
 
 .u-section-1 .u-text-2 {
   font-weight: 400;
+  text-shadow: -2px 0px 8px rgba(128,128,128,1);
   margin: -410px auto 0;
 }
 
@@ -59,10 +60,12 @@
 
 .u-section-1 .u-btn-1 {
   background-image: none;
+  font-weight: 400;
 }
 
 .u-section-1 .u-btn-2 {
   background-image: none;
+  font-weight: 400;
 }
 
 .u-section-1 .u-btn-3 {
@@ -136,7 +139,7 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 1146px;
+    min-height: 1155px;
   }
 
   .u-section-1 .u-shape-1 {
@@ -157,6 +160,7 @@
 
   .u-section-1 .u-text-2 {
     width: auto;
+    font-weight: 700;
     margin-top: -269px;
   }
 
@@ -184,38 +188,44 @@
   .u-section-1 .u-btn-1 {
     --radius: 15px;
     font-weight: 500;
-    margin: 0 auto 0 10px;
-    padding: 160px 30px 162px;
+    border-style: solid;
+    margin: 10px auto 0 10px;
+    padding: 151px 26px 152px 25px;
   }
 
   .u-section-1 .u-btn-2 {
     --radius: 15px;
     font-weight: 500;
-    margin: -373px 10px 0 auto;
-    padding: 62px 20px 63px 19px;
+    border-style: solid;
+    margin: -364px 10px 0 auto;
+    padding: 57px 15px;
   }
 
   .u-section-1 .u-btn-3 {
     --radius: 15px;
-    margin: 13px 10px 0 auto;
-    padding: 66px 53px 67px 52px;
+    border-style: solid;
+    margin: 14px 10px 0 auto;
+    padding: 57px 47px 57px 46px;
   }
 
   .u-section-1 .u-btn-4 {
     --radius: 15px;
-    margin: 14px auto 0;
-    padding: 16px 112px 17px 111px;
+    border-style: solid;
+    margin: 12px auto 0;
+    padding: 16px 106px 17px;
   }
 
   .u-section-1 .u-btn-5 {
     --radius: 15px;
-    margin: 14px auto 0 10px;
-    padding: 64px 34px 66px;
+    border-style: solid;
+    margin: 10px auto 0 10px;
+    padding: 57px 28px 58px 27px;
   }
 
   .u-section-1 .u-btn-6 {
     --radius: 15px;
-    margin: -155px 10px 40px auto;
-    padding: 51px 31px 53px 30px;
+    border-style: solid;
+    margin: -150px 10px 52px auto;
+    padding: 44px 23px 45px 22px;
   }
 }

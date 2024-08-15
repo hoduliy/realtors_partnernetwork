@@ -1,0 +1,131 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 600px;
+}
+
+.u-section-1 .u-text-1 {
+  width: auto;
+  font-weight: 600;
+  margin: 18px auto 0;
+}
+
+.u-section-1 .u-list-1 {
+  width: 324px;
+  margin: 20px auto 0 8px;
+}
+
+.u-section-1 .u-repeater-1 {
+  min-height: 264px;
+  grid-auto-columns: 100%;
+  grid-template-columns: repeat(1, 100%);
+  grid-gap: 0px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 10px;
+}
+
+.u-section-1 .u-shape-1 {
+  height: 68px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 10px;
+}
+
+.u-section-1 .u-shape-2 {
+  height: 68px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-container-layout-3 {
+  padding: 10px;
+}
+
+.u-section-1 .u-shape-3 {
+  height: 68px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-list-2 {
+  width: 324px;
+  margin: 0 auto 0 8px;
+}
+
+.u-section-1 .u-repeater-2 {
+  min-height: 264px;
+  grid-auto-columns: 100%;
+  grid-template-columns: repeat(1, 100%);
+  grid-gap: 0px;
+}
+
+.u-section-1 .u-container-layout-4 {
+  padding: 10px;
+}
+
+.u-section-1 .u-shape-4 {
+  height: 68px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-container-layout-5 {
+  padding: 10px;
+}
+
+.u-section-1 .u-shape-5 {
+  height: 68px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-container-layout-6 {
+  padding: 10px;
+}
+
+.u-section-1 .u-shape-6 {
+  height: 68px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    line-height: 0.6;
+  }
+} .u-section-2 {
+  background-image: none;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 121px;
+}
+
+.u-section-2 .u-btn-1 {
+  background-image: none;
+}
+
+.u-section-2 .u-btn-2 {
+  background-image: none;
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-btn-1 {
+    --radius: 15px;
+    margin: 11px auto 0 53px;
+    padding: 24px 13px 25px 12px;
+  }
+
+  .u-section-2 .u-btn-2 {
+    --radius: 15px;
+    margin: -100px auto 11px 189px;
+    padding: 37px 26px;
+  }
+}
